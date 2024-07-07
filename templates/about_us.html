@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Main Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="./styles/main.css"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="{{ url_for('static', filename='css/theme.css') }} " rel="stylesheet" />
+  </head>
+  <style>
+    #about_us .lead {
+  font-weight: 400;
+}
+
+#about_us .row {
+  display: flex;
+}
+
+  
+
+
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+  </style>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" data-navbar-on-scroll="data-navbar-on-scroll">
+      <div class="container"><a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='img/favicons/favicon.png') }}" height="31" alt="logo" /></a>
+        <a class="" href="/" style="text-decoration: none;"><h1 style="font-weight: bold;font-family: Georgia, 'Times New Roman', Times, serif;font-size: xx-large;text-align: center;">HateCheck</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+        <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ url_for('upload_meme')}}">Upload Meme</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ url_for('upload_tweet')}}">Upload Tweet</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ url_for('about_us')}}">About us</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" aria-current="page" href="#marketing">Contact us</a></li> -->
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="about_us">
+        <section class="py-3 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-bolder fs-1 text mb-4">About Us</h1>
+              <p class="lead fw-normal fs-2 text">
+                What's this project about?</p>
+                <p class="lead fw-normal fs-4 text"> We are using natural language processing and computer vision. The goal is to analyze meme captions along with the associated image in the background by considering the context to ultimately classifying a meme as hateful or not.
+              </p>
+              <p class="lead fw-normal fs-2 text">
+                Why did we do this?</p>
+                <p class="lead fw-normal fs-4 text"> We did this project as a part of a college curriculum (Mini-Project). Out of the many ideas, we found this project to be interesting and stood apart from the usual ideas.
+              </p>
+              <p class="lead fw-normal fs-2 text">
+                What did we learn from this?</p>
+                <p class="lead fw-normal fs-4 text"> type here.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    
+      
+    </main>
+
+    <footer class="fixed-bottom text-body-secondary py-0">
+      <!--Waves Container-->
+      <div>
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(245,200,39,0.8)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(245,200,39,0.6)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(245,200,39,0.4)"
+            />
+            <!--<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />-->
+          </g>
+        </svg>
+      </div>
+    </footer>
+
+    <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+       
+      </body>
+    </html>
